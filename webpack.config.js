@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
-    
+
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -38,7 +38,8 @@ module.exports = {
         test: /\.js$/,
         exclude: [
           /node_modules/,
-          /spec/
+          /spec/,
+          /js/
         ],
         loader: "eslint-loader"
       }
@@ -46,9 +47,3 @@ module.exports = {
     ]
   }
 };
-
-// {
-//         test: /\.js$/,
-//         exclude: /node_modules/,
-//         loader: "eslint-loader"
-//       }
